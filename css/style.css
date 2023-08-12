@@ -1,6 +1,6 @@
 /* $base-background: #00CC99; */
 body {
-  background: #D18B49;
+  background: #5e4fa2;
   color: rgba(0, 0, 0, 0.6);
   font-family: "Roboto", sans-serif;
   font-size: 14px;
@@ -9,6 +9,19 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
+}
+
+header.int{
+  padding-top: 5%;
+  padding-bottom: 5%;
+  height: 30%;
+}
+
+.int h1{
+  font-family: Arial Black,Arial Bold,Gadget,sans-serif; 
+  font-size: x-large;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .btn {
@@ -23,10 +36,15 @@ body {
   transition: 0.5s ease;
 }
 
+a#prev {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
 .card {
   background: #FFFFFF;
   max-width: 400px;
-  margin: 100px auto;
+  margin: auto;
   border-radius: 12px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   box-sizing: border-box;
@@ -55,8 +73,10 @@ body {
   visibility: visible;
 }
 
-.thumbnail {
-  margin: 0 0 48px;
+.thumbnail img{
+  height: 100%;
+  width: 100%;
+  border-radius: 12px;
 }
 
 .title {
@@ -65,6 +85,7 @@ body {
   font-size: 24px;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
+  margin-top: 5%;
 }
 
 .description {

@@ -30,21 +30,49 @@ $(document).ready(function() {
   }
 
   var productItem = $('.product'),
-    productCurrentItem = productItem.filter('.active');
+  productCurrentItem = productItem.filter('.active');
+
+  var btnprev = document.getElementById("prev");
+  var btnnext = document.getElementById("next");
+
+  var cnt = 1;
 
   $('#next').on('click', function(e) {
     e.preventDefault();
+
+    cnt++;
 
     var nextItem = productCurrentItem.next();
 
     productCurrentItem.removeClass('active');
 
-    if (nextItem.length) {
-
+    if (cnt < 16) {
       productCurrentItem = nextItem.addClass('active');
-    } else {
-      productCurrentItem = productItem.first().addClass('active');
-    }
+      if(cnt == 2){
+        btnprev.style.opacity = 1;
+        btnprev.style.pointerEvents = "all";
+      }if(cnt == 10){
+        btnnext.innerHTML = "NON CLICCARMI";
+      }if(cnt == 11){
+        btnnext.innerHTML = "NON RICASCARCI";
+      }if(cnt == 12){
+        btnnext.innerHTML = "TI PREGO BASTA";
+      }if(cnt == 13){
+        btnnext.innerHTML = "L'HAI VOLUTO TU";
+      }if(cnt == 14){
+        btnprev.style.opacity = 0.5;
+        btnprev.style.pointerEvents = "none";
+        btnnext.innerHTML = "SI LO SO, HO SCRITTO TANTO";
+      }if(cnt == 15){
+        btnprev.style.opacity = 1;
+        btnprev.style.pointerEvents = "all";
+        btnnext.style.opacity = 0.5;
+        btnnext.style.pointerEvents = "none"
+      }
+    }else{
+      productCurrentItem = nextItem.addClass('active');
+    } 
+    
 
     calcProductHeight();
     animateContentColor();
@@ -53,14 +81,36 @@ $(document).ready(function() {
   $('#prev').on('click', function(e) {
     e.preventDefault();
 
+    cnt--;
+
     var prevItem = productCurrentItem.prev();
 
     productCurrentItem.removeClass('active');
 
-    if (prevItem.length) {
+    if (cnt == 1) {
       productCurrentItem = prevItem.addClass('active');
+      btnprev.style.opacity = 0.5;
+      btnprev.style.pointerEvents = "none";
     } else {
-      productCurrentItem = productItem.last().addClass('active');
+      productCurrentItem = prevItem.addClass('active');
+      btnnext.innerHTML = "Prossimo";
+      btnnext.style.opacity = 1;
+      btnnext.style.pointerEvents = "all";
+      if(cnt == 10){
+        btnnext.innerHTML = "NON CLICCARMI";
+      }if(cnt == 11){
+        btnnext.innerHTML = "NON RICASCARCI";
+      }if(cnt == 12){
+        btnnext.innerHTML = "TI PREGO BASTA";
+      }if(cnt == 13){
+        btnnext.innerHTML = "L'HAI VOLUTO TU";
+      }if(cnt == 14){
+        btnprev.style.opacity = 0.5;
+        btnprev.style.pointerEvents = "none";
+        btnnext.style.opacity = 1;
+        btnnext.style.pointerEvents = "all"
+        btnnext.innerHTML = "SI LO SO, HO SCRITTO TANTO";
+      }
     }
 
     calcProductHeight();
