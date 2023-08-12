@@ -149,8 +149,38 @@ a#prev {
 }
 
 @media screen and (max—width: 600px){
+  header.int{
+    padding-top: auto;
+    padding-bottom: auto;
+  }
   h1{
     font-size: 36px;
     line-height: 50px;
+  }
+  .card {
+    background: #FFFFFF;
+    max-width: auto;
+    margin: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    box-sizing: border-box;
+    padding: 48px;
+    text-align: center;
+  }
+  .thumbnail img{
+    height: auto;
+    width: auto;
+    border-radius: 12px;
+  }
+  .btn {
+    border-radius: 2px;
+    padding: auto auto;
+    color: #5e4fa2;
+    font-size: auto;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
   }
 }
