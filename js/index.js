@@ -68,6 +68,7 @@ $(document).ready(function() {
         btnprev.style.pointerEvents = "all";
         btnnext.style.opacity = 0.5;
         btnnext.style.pointerEvents = "none"
+        btnnext.innerHTML = "QUANTI PUNTI VALE TUTTO QUESTO?";
       }
     }else{
       productCurrentItem = nextItem.addClass('active');
