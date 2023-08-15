@@ -35,6 +35,8 @@ $(document).ready(function() {
   var btnprev = document.getElementById("prev");
   var btnnext = document.getElementById("next");
 
+  var num = document.getElementById("num");
+
   var cnt = 1;
 
   $('#next').on('click', function(e) {
@@ -42,28 +44,34 @@ $(document).ready(function() {
 
     cnt++;
 
+    if(12 - cnt > 0){
+      num.innerHTML = (12 - cnt) + "° Posizione";
+    }else{
+      num.innerHTML = "";
+    }
+
     var nextItem = productCurrentItem.next();
 
     productCurrentItem.removeClass('active');
 
-    if (cnt < 16) {
+    if (cnt < 17) {
       productCurrentItem = nextItem.addClass('active');
       if(cnt == 2){
         btnprev.style.opacity = 1;
         btnprev.style.pointerEvents = "all";
-      }if(cnt == 10){
-        btnnext.innerHTML = "NON CLICCARMI";
       }if(cnt == 11){
-        btnnext.innerHTML = "NON RICASCARCI";
+        btnnext.innerHTML = "NON CLICCARMI";
       }if(cnt == 12){
-        btnnext.innerHTML = "TI PREGO BASTA";
+        btnnext.innerHTML = "NON RICASCARCI";
       }if(cnt == 13){
-        btnnext.innerHTML = "L'HAI VOLUTO TU";
+        btnnext.innerHTML = "TI PREGO BASTA";
       }if(cnt == 14){
+        btnnext.innerHTML = "L'HAI VOLUTO TU";
+      }if(cnt == 15){
         btnprev.style.opacity = 0.5;
         btnprev.style.pointerEvents = "none";
         btnnext.innerHTML = "SI LO SO, HO SCRITTO TANTO";
-      }if(cnt == 15){
+      }if(cnt == 16){
         btnprev.style.opacity = 1;
         btnprev.style.pointerEvents = "all";
         btnnext.style.opacity = 0.5;
@@ -83,7 +91,13 @@ $(document).ready(function() {
     e.preventDefault();
 
     cnt--;
-
+    
+    if(12 - cnt > 0){
+      num.innerHTML = (12 - cnt) + "° Posizione";
+    }else{
+      num.innerHTML = "";
+    }
+    
     var prevItem = productCurrentItem.prev();
 
     productCurrentItem.removeClass('active');
@@ -97,15 +111,15 @@ $(document).ready(function() {
       btnnext.innerHTML = "Prossimo";
       btnnext.style.opacity = 1;
       btnnext.style.pointerEvents = "all";
-      if(cnt == 10){
+      if(cnt == 11){
         btnnext.innerHTML = "NON CLICCARMI";
-      }if(cnt == 11){
-        btnnext.innerHTML = "NON RICASCARCI";
       }if(cnt == 12){
-        btnnext.innerHTML = "TI PREGO BASTA";
+        btnnext.innerHTML = "NON RICASCARCI";
       }if(cnt == 13){
-        btnnext.innerHTML = "L'HAI VOLUTO TU";
+        btnnext.innerHTML = "TI PREGO BASTA";
       }if(cnt == 14){
+        btnnext.innerHTML = "L'HAI VOLUTO TU";
+      }if(cnt == 15){
         btnprev.style.opacity = 0.5;
         btnprev.style.pointerEvents = "none";
         btnnext.style.opacity = 1;

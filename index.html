@@ -17,37 +17,29 @@
 <!--  scroll="no" style="overflow: hidden"  -->
 <body>
   <header class="int">
-    <h1>TOP 10 MESSAGGI DELLA NOSTRA CHAT   <img src="img/silenzio.png" width="4.0%" height="4.0%"></h1>
+    <h1 id="num"></h1>
   </header>
 
   <main>
     <div class="card">
       <div class="products">
 
-        <div class="product active" product-id="1" product-color="#5e4fa2" value=1>
+        <div class="product active" product-id="0" product-color="#5e4fa2" value=1>
+          <div><img src="img/festa.png" width="50%" height="50%"/></div>
+          <h1 class="title"></h1>
+          <p class="description">Oggi facciamo un mese quindi non sapendo che fare ho stilato una Top 10 dei miglori messaggi della nostra chat...<br>PREPARATI
+            <img src="img/girato.png" width="5%" height="5%">
+          </p>
+        </div>
+
+        <div class="product" product-id="1" product-color="#5e4fa2" value=1>
           <div class="thumbnail"><img src="img/accetta.jpg"/></div>
           <h1 class="title">PARTIAMO A BOMBA CON QUESTO ABORTO DI BATTUTA</h1>
           <p class="description">No comment
             <img src="img/comment.png" width="5%" height="5%">
           </p>
         </div>
-        <div class="product" product-id="2" product-color="#3288bd">
-          <div class="thumbnail"><img src="img/te lo dico.jpg"/></div>
-          <h1 class="title">+3 PUNTI CHE NON TI HO DATO</h1>
-          <p class="description">Pochi cazzi, non me l'aspettavo e mi ha colpito e affondato
-          <img src="img/sciolto.png" width="5%" height="5%">
-          <img src="img/sciolto.png" width="5%" height="5%">
-          <img src="img/sciolto.png" width="5%" height="5%">
-          </p>
-        </div>
-        <div class="product" product-id="3" product-color="#66c2a5">
-          <div class="thumbnail"><img src="img/CAZZO.jpg"/></div>
-          <h1 class="title">E'STATA DURA MA CE L'HO FATTA</h1>
-          <p class="description">“Chi si leva presto, fa una buona giornata.”
-          <img src="img/occhiali.png" width="5%" height="5%">
-          </p>
-        </div>
-        <div class="product" product-id="4" product-color="#abdda4">
+        <div class="product" product-id="2" product-color="#abdda4">
           <div class="thumbnail"><img src="img/merce.jpg"/></div>
           <h1 class="title">WOWOW</h1>
           <p class="description">Niente da dire... solo 
@@ -56,37 +48,54 @@
           <img src="img/unghie.png" width="5%" height="5%">
           </p>
         </div>
-        <div class="product" product-id="5" product-color="#c4dc45">
+        <div class="product" product-id="3" product-color="#c4dc45">
           <div class="thumbnail"><img src="img/pork.jpg"/></div>
           <h1 class="title">MI SONO PIEGATO IN DUE</h1>
           <p class="description">Non chiedermi perchè ma mi ha fatto straridere, sarà che avevo lavorato tanto ma complimenti 
             <img src="img/applausi.png" width="5%" height="5%">
           </p>
         </div>
-        <div class="product" product-id="6" product-color="#9e7d21">
-          <div class="thumbnail"><img src="img/mi manchi.jpg"/></div>
-          <h1 class="title">Sottomettere: /sot·to·mét·te·re/</h1>
-          <p class="description">TRANSITIVO:
-            <br>Mettere sotto, assoggettare alla propria volontà, ridurre all'obbedienza. Ex:"un padre autoritario che sottomette i suoi figli"
-            <br>RIFLESSIVO:
-            <br>Fare atto di resa, riconoscere il dominio degli avversari. Ex:"sottomesso all'oppressore"</p>
+        <div class="product" product-id="4" product-color="#3288bd">
+          <div class="thumbnail"><img src="img/te lo dico.jpg"/></div>
+          <h1 class="title">+3 PUNTI CHE NON TI HO DATO</h1>
+          <p class="description">Pochi cazzi, non me l'aspettavo. Mi ha colpito e affondato
+          <img src="img/sciolto.png" width="5%" height="5%">
+          <img src="img/sciolto.png" width="5%" height="5%">
+          <img src="img/sciolto.png" width="5%" height="5%">
+          </p>
+        </div>  
+        <div class="product" product-id="5" product-color="#d53e4f">
+          <div class="thumbnail"><img src="img/troia.jpg"/></div>
+          <h1 class="title">SPACCATA</h1>
+          <p class="description">Direi una delle più belle...<br>non che da me ci si possa aspettare di meno
+          <img src="img/ovvio.png" width="5.0%" height="5.0%"><img src="img/ovvio.png" width="5.0%" height="5.0%"><img src="img/ovvio.png" width="5.0%" height="5.0%"></p>
         </div>
-        <div class="product" product-id="7" product-color="#fdae61">
+        <div class="product" product-id="6" product-color="#fdae61">
           <div class="thumbnail"><img src="img/questo spoiler.jpg"/></div>
           <h1 class="title">PEGGIO DI AVENGERS END GAME</h1>
           <p class="description">Purtroppo lo spoiler non basta a corrompermi, cara la mia tentatrice. Torno a ribadire che di re ce nè uno solo.. IO
             <img src="img/corona.png" width="5%" height="5%">
           </p>
         </div>
-        <div class="product" product-id="8" product-color="#f46d43">
-          <div class="thumbnail"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/Mouse.svg"/></div>
-          <h1 class="title">MESS 8</h1>
-          <p class="description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        <div class="product" product-id="7" product-color="#f46d43">
+          <div class="thumbnail"><img src="img/non ne parliamo.jpg"/></div>
+          <h1 class="title">TROPPO IMBARAZZO</h1>
+          <p class="description">Non ne parliamo.</p>
         </div>
-        <div class="product" product-id="9" product-color="#d53e4f">
-          <div class="thumbnail"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/Fox.svg"/></div>
-          <h1 class="title">MESS 9</h1>
-          <p class="description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        <div class="product" product-id="8" product-color="#66c2a5">
+          <div class="thumbnail"><img src="img/CAZZO.jpg"/></div>
+          <h1 class="title">E'STATA DURA MA CE L'HO FATTA</h1>
+          <p class="description">“Chi si leva presto, fa una buona giornata.”
+          <img src="img/occhiali.png" width="5%" height="5%">
+          </p>
+        </div>
+        <div class="product" product-id="9" product-color="#9e7d21">
+          <div class="thumbnail"><img src="img/mi manchi.jpg"/></div>
+          <h1 class="title">Sottomettere: /sot·to·mét·te·re/</h1>
+          <p class="description">TRANSITIVO:
+            <br>Mettere sotto, assoggettare alla propria volontà, ridurre all'obbedienza. Ex:"un padre autoritario che sottomette i suoi figli"
+            <br>RIFLESSIVO:
+            <br>Fare atto di resa, riconoscere il dominio degli avversari. Ex:"sottomesso all'oppressore"</p>
         </div>
         <div class="product" product-id="10" product-color="#9e0142">
           <div class="thumbnail"><img src="img/5min.jpg"/></div>
